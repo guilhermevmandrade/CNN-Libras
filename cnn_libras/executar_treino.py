@@ -3,7 +3,7 @@ from convolutional_neural_network import ConvolutionalNeuralNetwork
 from tratamento_dados import carregar_data_augmentation, carregar_datasets_treino
 from plotar_graficos import plotar_metricas_treino
 
-epocas = 8
+epocas = 10
 tamanho_lote = 32
 altura_imagem, largura_imagem = 64, 64
 caminho_treino = os.path.join('dados/treino')
