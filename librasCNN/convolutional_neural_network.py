@@ -29,12 +29,14 @@ class ConvolutionalNeuralNetwork:
             layers.Rescaling(1./255, input_shape=inputShape),
             layers.Conv2D(32, 3, padding='same', activation='relu'),
             layers.MaxPooling2D(),
-            layers.Conv2D(32, 3, padding='same', activation='relu'),
-            layers.MaxPooling2D(),
             layers.Conv2D(64, 3, padding='same', activation='relu'),
             layers.MaxPooling2D(),
+            layers.Conv2D(128, 3, padding='same', activation='relu'),
+            layers.MaxPooling2D(),
+            layers.Conv2D(256, 3, padding='same', activation='relu'),
+            layers.MaxPooling2D(),
             layers.Flatten(),
-            layers.Dropout(0.5),
+            layers.Dropout(0.2),
             layers.Dense(256, activation='relu'),
             layers.Dense(num_classes, activation='softmax')
         ])

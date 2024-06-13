@@ -38,7 +38,7 @@ for nome_pasta in os.listdir(caminho_teste):
             # Carregar e processar a imagem
             img = tf.keras.utils.load_img(caminho_imagem, target_size=(altura_imagem, largura_imagem))
             img_array = tf.keras.utils.img_to_array(img)
-            img_array = tf.expand_dims(img_array, 0)  # Adicionar dimensão para o lote
+            img_array = tf.expand_dims(img_array, 0)
 
             # Fazer predição da imagem usando o modelo
             predictions = modelo.predict(img_array)
