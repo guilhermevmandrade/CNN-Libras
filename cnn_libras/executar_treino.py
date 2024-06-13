@@ -1,5 +1,4 @@
 import os
-
 from convolutional_neural_network import ConvolutionalNeuralNetwork
 from tratamento_dados import carregar_data_augmentation, carregar_datasets_treino
 from plotar_graficos import plotar_metricas_treino
