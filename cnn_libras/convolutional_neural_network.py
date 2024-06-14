@@ -33,8 +33,6 @@ class ConvolutionalNeuralNetwork:
             layers.MaxPooling2D(),
             layers.Conv2D(128, 3, padding='same', activation='relu'),
             layers.MaxPooling2D(),
-            layers.Conv2D(256, 3, padding='same', activation='relu'),
-            layers.MaxPooling2D(),
             layers.Flatten(),
             layers.Dropout(0.2),
             layers.Dense(256, activation='relu'),
@@ -61,7 +59,7 @@ class ConvolutionalNeuralNetwork:
             conjunto_treinamento,
             validation_data=conjunto_validacao,
             epochs=epocas,
-            callbacks=[EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=15)]
+            callbacks=[EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=5)]
         )
         return classificador
 
