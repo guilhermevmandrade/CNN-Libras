@@ -21,7 +21,7 @@ def plotar_metricas_treino(intervalo_epocas, classificador):
     plt.ylabel("Perda/Acurácia")
     plt.legend()
     plt.title('Perda e Acurácia de Treinamento e Validação')
-    plt.savefig('librasCNN/graficos/metricas_treino.png', bbox_inches='tight')
+    plt.savefig('cnn_libras/graficos/metricas_treino.png', bbox_inches='tight')
     plt.show()
     
 def plotar_metricas_teste(matriz_de_confusao, lista_letras):
@@ -81,7 +81,7 @@ def plotar_metricas_media(classes, metricas):
     plt.tight_layout()
     
     # Salvar e mostrar a figura
-    plt.savefig('librasCNN/graficos/metricas_teste_media.png', bbox_inches='tight')
+    plt.savefig('cnn_libras/graficos/metricas_teste_media.png', bbox_inches='tight')
     plt.show()
     
 def plotar_metricas_letras(classes, metricas, lista_letras):
@@ -112,7 +112,7 @@ def plotar_metricas_letras(classes, metricas, lista_letras):
     plt.ylabel('Métricas')  # Métricas no eixo y
     plt.title('Métricas de Avaliação do Modelo')
     plt.tight_layout()  # Ajustar automaticamente o layout
-    plt.savefig('librasCNN/graficos/metricas_teste_letras.png', bbox_inches='tight')
+    plt.savefig('cnn_libras/graficos/metricas_teste_letras.png', bbox_inches='tight')
     plt.show()
     
 def plotar_matriz_de_confusao(matriz_de_confusao, classes):
@@ -126,5 +126,5 @@ def plotar_matriz_de_confusao(matriz_de_confusao, classes):
     disp = ConfusionMatrixDisplay(confusion_matrix=matriz_de_confusao, display_labels=classes)
     fig, ax = plt.subplots(figsize=(10, 10))
     disp.plot(ax=ax)
-    plt.savefig('librasCNN/graficos/matriz_de_confusao.png', bbox_inches='tight')
+    plt.savefig('cnn_libras/graficos/matriz_de_confusao.png', bbox_inches='tight')
     plt.show()

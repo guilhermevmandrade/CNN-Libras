@@ -18,7 +18,7 @@ modelo = ConvolutionalNeuralNetwork(num_classes, aumento_dados, altura_imagem, l
 classificador = modelo.treinar_modelo(conjunto_treinamento, conjunto_validacao, epocas)
 
 # Salvar o modelo
-caminho_modelo = 'librasCNN/modelos/libras.keras'
+caminho_modelo = 'cnn_libras/modelos/libras.keras'
 modelo.salvar_modelo(caminho_modelo)
 
 # Plotar as métricas

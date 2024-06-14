@@ -12,7 +12,7 @@ altura_imagem, largura_imagem = 64, 64
 caminho_teste = os.path.join('dados/teste')
 
 # Carregar o modelo pré-treinado
-modelo = load_model('librasCNN/modelos/libras.keras')
+modelo = load_model('cnn_libras/modelos/libras.keras')
 
 # Listas para armazenar as classes verdadeiras e preditas
 classe_verdadeira = []

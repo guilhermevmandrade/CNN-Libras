@@ -11,14 +11,14 @@ from letras_dicionario import letras
 imagem_x, imagem_y = 64, 64
 
 # Carregando o modelo treinado
-classificador = load_model('librasCNN/modelos/libras.keras')
+classificador = load_model('cnn_libras/modelos/libras.keras')
 
 def previsor():
     """
     Função para prever a letra baseada na imagem capturada.
     """
     # Carregando a imagem para teste
-    imagem_teste = image.load_img('librasCNN/capturas/img.png', target_size=(imagem_x, imagem_y))
+    imagem_teste = image.load_img('cnn_libras/capturas/img.png', target_size=(imagem_x, imagem_y))
     imagem_teste = image.img_to_array(imagem_teste)
     imagem_teste = np.expand_dims(imagem_teste, axis=0)
     
@@ -60,7 +60,7 @@ while True:
     img_cinza = cv2.cvtColor(imcrop, cv2.COLOR_BGR2GRAY)
     
     # Salvando a imagem em escala de cinza
-    nome_imagem = "librasCNN/capturas/img.png"
+    nome_imagem = "cnn_libras/capturas/img.png"
     img_salva = cv2.resize(img_cinza, (imagem_x, imagem_y))
     cv2.imwrite(nome_imagem, img_salva)
     
