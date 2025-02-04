@@ -1,3 +1,5 @@
 cnn_libras/__pycache__
 .venv
 .vscode
+dados/treino/*
+dados/teste/*
